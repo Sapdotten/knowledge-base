@@ -73,7 +73,7 @@ sudo mdadm --create --verbose /dev/md0 --level=5 --raid-devices=3 /dev/sdb /dev/
 3.  `sudo lvcreate -l 100%FREE -n lv0 semenova` — создание логического тома на всё место.
 4.  `sudo mkfs.ext4 /dev/semenova/lv0` — форматирование в ext4.
 5.  `sudo mkdir -p /raid/0` — создание точки монтирования.
-6.  `sudo blkid /dev/ivanov/lv0` - получение uuid файловой системы для монтирования.
+6.  `sudo blkid /dev/semenova/lv0` - получение uuid файловой системы для монтирования.
 7.  `sudo nano /etc/fstab` - настройка постоянного монтирования:
     ```
     UUID=abe01fd6-3fc8-4b3c-8b9e-c5b98568ec15  /raid/0  ext4  defaults,nofail  0  2
